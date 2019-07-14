@@ -1,5 +1,9 @@
 package _03_To_Do_List;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 public class ToDoList {
 	/*
 	 * Create a program with five buttons, add task, view tasks, remove task, save list, and load list. 
@@ -21,4 +25,23 @@ public class ToDoList {
 	 * 
 	 * When the program starts, it should automatically load the last saved file into the list.
 	 */
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JButton addTask = new JButton("add task");
+		JButton viewTasks = new JButton("view tasks");
+		JButton removeTask = new JButton("remove task");
+		JButton saveList = new JButton("save list");
+		JButton loadList = new JButton("load list");
+		panel.add(loadList);
+		panel.add(saveList);
+		panel.add(removeTask);
+		panel.add(addTask);
+		panel.add(viewTasks);
+		frame.add(panel);
+		frame.pack();
+		frame.setVisible(true);
+	}
+	
 }
